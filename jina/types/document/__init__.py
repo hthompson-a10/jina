@@ -35,8 +35,6 @@ DocumentSourceType = TypeVar('DocumentSourceType',
 _document_fields = set(list(jina_pb2.DocumentProto().DESCRIPTOR.fields_by_camelcase_name) + list(
     jina_pb2.DocumentProto().DESCRIPTOR.fields_by_name))
 
-_document_fields_dunder_sub_access = map(lambda x: f'{x}__', _document_fields)
-
 
 class Document(ProtoTypeMixin):
     """
